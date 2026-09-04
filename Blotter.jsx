@@ -53,7 +53,7 @@ export default function Blotter() {
 
   const handleDelete = async (b) => {
     if (!confirm('Delete this blotter entry?')) return;
-    await base44.entities.Blotter.delete(b.id);
+    await vscode.entities.Blotter.delete(b.id);
     toast({ title: 'Entry deleted' });
     load();
   };
