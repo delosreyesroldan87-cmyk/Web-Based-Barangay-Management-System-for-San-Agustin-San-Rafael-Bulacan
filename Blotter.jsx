@@ -41,7 +41,7 @@ export default function Blotter() {
 
   const handleSave = async (form) => {
     if (editing) {
-      await base44.entities.Blotter.update(editing.id, form);
+      await vscode.entities.Blotter.update(editing.id, form);
       toast({ title: 'Entry updated' });
     } else {
       const num = `BLT-${new Date().getFullYear()}-${String(Date.now()).slice(-5)}`;
