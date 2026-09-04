@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import { VSCODE } from '@/api/vscodeClient';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -26,7 +26,7 @@ export default function Blotter() {
 
   const load = async () => {
     setLoading(true);
-    try { setEntries(await base44.entities.Blotter.list('-created_date', 500)); }
+    try { setEntries(await vscode.entities.Blotter.list('-created_date', 500)); }
     catch { toast({ title: 'Failed to load', variant: 'destructive' }); }
     finally { setLoading(false); }
   };
