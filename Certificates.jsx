@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import { vscode } from '@/api/vscodeClient';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -42,11 +42,11 @@ export default function Certificates() {
 
   const handleSave = async (form) => {
     if (editing) {
-      await base44.entities.Certificate.update(editing.id, form);
+      await vscode.entities.Certificate.update(editing.id, form);
       toast({ title: 'Certificate updated' });
     } else {
       const num = `BA-SA-${new Date().getFullYear()}-${String(Date.now()).slice(-6)}`;
-      await base44.entities.Certificate.create({ ...form, certificate_number: form.certificate_number || num });
+      await vscode.entities.Certificate.create({ ...form, certificate_number: form.certificate_number || num });
       toast({ title: 'Certificate issued' });
     }
     load();
@@ -54,7 +54,7 @@ export default function Certificates() {
 
   const handleDelete = async (c) => {
     if (!confirm('Delete this certificate record?')) return;
-    await base44.entities.Certificate.delete(c.id);
+    await vscode.entities.Certificate.delete(c.id);
     toast({ title: 'Certificate deleted' });
     load();
   };
