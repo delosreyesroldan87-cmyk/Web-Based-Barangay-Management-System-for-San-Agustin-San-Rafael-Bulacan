@@ -45,7 +45,7 @@ export default function Blotter() {
       toast({ title: 'Entry updated' });
     } else {
       const num = `BLT-${new Date().getFullYear()}-${String(Date.now()).slice(-5)}`;
-      await base44.entities.Blotter.create({ ...form, entry_number: form.entry_number || num });
+      await vscode.entities.Blotter.create({ ...form, entry_number: form.entry_number || num });
       toast({ title: 'Blotter entry recorded' });
     }
     load();
