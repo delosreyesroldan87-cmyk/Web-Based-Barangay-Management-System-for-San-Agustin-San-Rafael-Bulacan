@@ -51,10 +51,10 @@ export default function Dashboard() {
       base44.auth.me().then(setMe).catch(() => {});
       try {
         const [certs, blotters, announcements, residents] = await Promise.all([
-          base44.entities.Certificate.list('-created_date', 100),
-          base44.entities.Blotter.list('-created_date', 100),
-          base44.entities.Announcement.list('-created_date', 20),
-          base44.entities.Resident.list('-created_date', 10),
+          vscode.entities.Certificate.list('-created_date', 100),
+          vscode.entities.Blotter.list('-created_date', 100),
+          vscode.entities.Announcement.list('-created_date', 20),
+          vscode.entities.Resident.list('-created_date', 10),
         ]);
 
         const weekAgo = new Date(Date.now() - 7 * 24 * 3600 * 1000);
