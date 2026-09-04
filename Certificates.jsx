@@ -26,7 +26,7 @@ export default function Certificates() {
 
   const load = async () => {
     setLoading(true);
-    try { setCerts(await base44.entities.Certificate.list('-created_date', 500)); }
+    try { setCerts(await vscode.entities.Certificate.list('-created_date', 500)); }
     catch { toast({ title: 'Failed to load', variant: 'destructive' }); }
     finally { setLoading(false); }
   };
