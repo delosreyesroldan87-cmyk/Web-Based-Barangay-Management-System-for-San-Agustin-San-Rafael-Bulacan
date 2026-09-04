@@ -1,45 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agustin Connect Portal</title>
-  <meta name="description" content="Web-Based Barangay Management System for San Agustin, San Rafael, Bulacan">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <aside class="sidebar">
-    <div class="brand">
-    <div class="brand-mark">
-  <img src="barangay-logo.jpg" alt="Barangay San Agustin Logo">
-</div>
-      <div><strong>Agustin Connect</strong><small>Barangay Portal</small></div>
-    </div>
-    <nav>
-      <button class="nav active" data-page="dashboard">⌂ <span>Dashboard</span></button>
-      <button class="nav" data-page="residents">👥 <span>Residents</span></button>
-      <button class="nav" data-page="certificates">▣ <span>Certificates</span></button>
-      <button class="nav" data-page="reports">⚠ <span>Critical Reports</span></button>
-      <button class="nav" data-page="announcements">📢 <span>Announcements</span></button>
-    </nav>
-    <div class="sidebar-footer">San Agustin<br>San Rafael, Bulacan</div>
-  </aside>
-
-  <main class="main">
-    <header class="topbar">
-      <div>
-        <div class="eyebrow">BARANGAY MANAGEMENT SYSTEM</div>
-        <h1 id="pageTitle">Dashboard</h1>
-      </div>
-      <div class="top-actions">
-        <button class="icon-btn" title="Notifications">🔔</button>
-        <button class="profile"><span class="avatar">JM</span><span>Admin</span> ▾</button>
-      </div>
-    </header>
-
-    <section id="app"></section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Base44 APP</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
