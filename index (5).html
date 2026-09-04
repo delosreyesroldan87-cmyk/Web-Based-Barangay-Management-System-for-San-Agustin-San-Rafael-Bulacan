@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agustin Connect Portal</title>
+  <meta name="description" content="Web-Based Barangay Management System for San Agustin, San Rafael, Bulacan">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">AC</div>
+      <div><strong>Agustin Connect</strong><small>Barangay Portal</small></div>
+    </div>
+    <nav>
+      <button class="nav active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+      <button class="nav" data-page="residents">👥 <span>Residents</span></button>
+      <button class="nav" data-page="certificates">▣ <span>Certificates</span></button>
+      <button class="nav" data-page="reports">⚠ <span>Critical Reports</span></button>
+      <button class="nav" data-page="announcements">📢 <span>Announcements</span></button>
+    </nav>
+    <div class="sidebar-footer">San Agustin<br>San Rafael, Bulacan</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">BARANGAY MANAGEMENT SYSTEM</div>
+        <h1 id="pageTitle">Dashboard</h1>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" title="Notifications">🔔</button>
+        <button class="profile"><span class="avatar">JM</span><span>Admin</span> ▾</button>
+      </div>
+    </header>
+
+    <section id="app"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
