@@ -38,10 +38,10 @@ export default function Announcements() {
 
   const handleSave = async (form) => {
     if (editing) {
-      await base44.entities.Announcement.update(editing.id, form);
+      await vscode.entities.Announcement.update(editing.id, form);
       toast({ title: 'Announcement updated' });
     } else {
-      await base44.entities.Announcement.create(form);
+      await vscode.entities.Announcement.create(form);
       toast({ title: 'Announcement posted' });
     }
     load();
